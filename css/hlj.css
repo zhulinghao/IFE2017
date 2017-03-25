@@ -6,6 +6,11 @@
 	background: url(../img/banner_5.jpg)no-repeat;
 	z-index: -1;
 }
+.algin{
+	width: 100%;
+	height: 637px;
+	position: relative;
+}
 #cz{
 	background-color: #2189BF;color: #FFFFFF;border: solid 0px;width: 50px;height: 22px;
 		cursor: pointer;
@@ -16,6 +21,7 @@
 }
 .header{
 	width: 100%;
+	min-width:1336px;
 	height: 80px;
 	background-color: rgba(132,204,201,0.5);z-index: 1;
 	position: relative;
