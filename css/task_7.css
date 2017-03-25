@@ -41,11 +41,17 @@ body{
 .head_right a{
 	color: #888888;
 	text-decoration: none;
-	padding-bottom: 15px;
+	padding-bottom: 12px;
+}
+#a_1 a{
+		color: #FF0000;
+		border-bottom: solid 5px #FF0000;
+		color: #FF0000;;
 }
 .head_right a:hover{
 	color: #FF0000;
-		border-bottom: solid 3px #FF0000;
+		border-bottom: solid 5px #FF0000;
+		transition: all 0.5s;
 }
 #li_6 a{
 	color:#FF0000 ;
@@ -95,7 +101,8 @@ body{
 	background-color: #FF6347;
 }
 .sec_1_button button:hover{
-	border-radius: 8px;
+	border-radius: 20px;
+	transition: all 0.5s;
 }
 /* section_2 */
 #sec_2{
