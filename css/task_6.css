@@ -232,13 +232,36 @@ h4{
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	
 }
 .r_b_right {
-	background-color: #d45d5c;
+	
 	height: 120px;
 	width: 170px;
 	position: absolute;
 	right: 8px;
 	bottom: 40px;
 	overflow:hidden;
+}
+.r_b_left_0{
+	color: #FFFFFF;
+	font-size: 120px;
+	font-weight: 600;
+	line-height: 160px;
+	
+}
+#r_b_left_txt{
+	padding-left: 10px;
+	position: absolute;
+	top: 42px;
+	right: 10px;
+	border-left: 4px solid #FFFFFF;
+	color: #FFFFFF;
+}
+._r_b_left_p2{
+	font-size: 14px;
+}
+.symbol{
+	font-size: 60px;
+	color: #d45d5c;;
 }
