@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复杂的页面布局</title>
+		<link rel="stylesheet" type="text/css" href="css/task_9.css"/>
+		<script>
+			window.onload=function(){
+				var oDiv=document.getElementById('aside_main');
+				var oDiv1=oDiv.getElementsByTagName('div');
+				var oLi=oDiv.getElementsByTagName('li');
+				
+				for (var i=0; i<oLi.length ; i++) {
+					oLi[i].index=i;
+					oLi[i].onclick=function(){
+						for (var i=0; i<oDiv1.length ; i++) {
+							oLi[i].id='';
+							
+						}
+						
+						this.id="active";
+						oDiv1[this.index].style.display='block';					
+					}
+					oLi[i].onmouseover=function(){
+							oDiv1[this.index].style.display='none';
+						}
+					
+					
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="header">
+				<div class="head_left">
+					<img src="img/task_9_1.jpg" href="https://zhidao.baidu.com/question/211395978.html"/>
+				</div>
+				<div class="head_right">
+					<input type="text" name="" id="" value="" placeholder="输入姨妈红颜色"/>
+					<a href="">登录</a>
+				</div>
+			</div>
+		</header>
+		<div class="waper">
+			<div class="aside">
+				<div class="aside_head">
+					<div class="aside_head_pic">
+					<a href=""><img src="img/浪客行_5.jpg"/></a>
+					<p><a href="">VAGABOND</a></p>
+					</div>
+					<div class="aside_head_span">
+								<a href=""><span class="td_1">100<br />收藏</span></a>
+								<a href=""><span>20<br />粉丝</span></a>
+					</div>
+				</div>
+				<div id="aside_main">
+					<ul class="ul_1">
+						<li>个人报表</li>
+						<div>
+							<p class="aside_main_ul_dt " id="active">文件夹1</p>
+							<p class="aside_main_ul_dd">文档1</p>
+							<p class="aside_main_ul_dd" id="active">文档2</p>
+							<p class="aside_main_ul_dt">文件夹2</p>
+							<p class="aside_main_ul_dt">文件夹3</p>
+						</div>
+						<li>个人收藏</li>
+						<div>
+							<p class="aside_main_ul_dt " id="active">文件夹1</p>
+							<p class="aside_main_ul_dd">文档1</p>
+							<p class="aside_main_ul_dd" id="active">文档2</p>
+							<p class="aside_main_ul_dt">文件夹2</p>
+							<p class="aside_main_ul_dt">文件夹3</p>
+						</div>
+						<li>我的分享</li>
+						<div>
+							<p class="aside_main_ul_dt " id="active">文件夹1</p>
+							<p class="aside_main_ul_dd">文档1</p>
+							<p class="aside_main_ul_dd" id="active">文档2</p>
+							<p class="aside_main_ul_dt">文件夹2</p>
+							<p class="aside_main_ul_dt">文件夹3</p>
+						</div>
+						<li>图库</li>
+						<div>
+							<p class="aside_main_ul_dt " id="active">文件夹1</p>
+							<p class="aside_main_ul_dd">文档1</p>
+							<p class="aside_main_ul_dd" id="active">文档2</p>
+							<p class="aside_main_ul_dt">文件夹2</p>
+							<p class="aside_main_ul_dt">文件夹3</p>
+						</div>
+						<li>成长记录</li>
+						<div>
+							<p class="aside_main_ul_dt " id="active">文件夹1</p>
+							<p class="aside_main_ul_dd">文档1</p>
+							<p class="aside_main_ul_dd" id="active">文档2</p>
+							<p class="aside_main_ul_dt">文件夹2</p>
+							<p class="aside_main_ul_dt">文件夹3</p>
+						</div>
+						<li>账户信息</li>
+						<div>
+							
+							<p class="aside_main_ul_dt " id="active">文件夹1</p>
+							<p class="aside_main_ul_dd">文档1</p>
+							<p class="aside_main_ul_dd" id="active">文档2</p>
+							<p class="aside_main_ul_dt">文件夹2</p>
+							<p class="aside_main_ul_dt">文件夹3</p>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<div class="main">
+				<div class="main_head">
+					<a href="">B站</a>\<a href="">个人报表</a>\<a href="">文件1</a>\<a href="" id="active_main_head">文档2</a>
+				</div>
+				<div class="main_part_1">
+					<div class="main_part_1_b">
+						<div class="main_part_1_box">
+						<table  cellspacing="" cellpadding="">
+							<tr>
+								<td>
+								<span >查询项 ：</span>
+								<select name="" class="main_part_1_box_s1">
+									<option value="">ZY</option>
+								</select></td>
+							</tr>
+						</table>
+						
+					</div>
+					<div class="main_part_1_box">
+						<table  cellspacing="" cellpadding="">
+							<tr>
+								<td>买 方 ：</td>
+								<td>
+									<select name="" class="main_part_1_box_s2">
+										<option value="">ZY</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>卖 方：</td>
+								<td>
+									<select name="" class="main_part_1_box_s2">
+										<option value="">ZY</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="main_part_1_box">
+						<table  cellspacing="" cellpadding="">
+							<tr>
+								<td>日期：<input type="date" /></td>
+								<td>总耗时长：
+									<select name="" class="main_part_1_box_s1">
+										<option value="">ZY</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>人数：<select name="" class="main_part_1_box_s1">
+										<option value="">10人</option>
+									</select>成交项：</td>
+								<td>
+									<select name="" class="main_part_1_box_s2">
+										<option value="" class="main_part_1_box_s2">ZY</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div id="part1_button"><input type="button" name="" id="" value="搜索" /></div>
+					</div>
+				</div>
+				<div class="main_part_2">
+					<div class="main_part_2_01"></div>
+					<div class="main_part_2_02"></div>
+					<div class="main_part_2_02"></div>
+					<div class="main_part_2_02"></div>
+					<div class="main_part_2_02"></div>
+					<div class="main_part_2_02"></div>
+					<div class="main_part_2_02"></div>
+					<div class="main_part_2_03"></div>
+				</div>
+				<div class="main_part_3">
+					<p>2017年3月季度统计</p>
+					<div class="main_part_3_01" > </div>
+					<div class="main_part_3_01" style="left: 225px;"></div>
+					<div class="main_part_3_01" style="left: 450px;"></div>					
+					<div class="main_part_3_01" style="left: 675px;"></div>					
+					
+				</div>
+				<div class="main_part_4">
+					
+				</div>
+				<div class="main_part_5">
+					
+				</div>
+				<div class="main_part_6">
+					
+				</div>
+				<div class="main_part_7">
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
