@@ -4,6 +4,7 @@ body,nav,ul,li{
 	font-family: 'Raleway', sans-serif;
   	font-weight:400;
 }
+/*导航栏*/
 #nav_right img{
 	height: 20px;
 	width: 20px;
@@ -31,11 +32,12 @@ body,nav,ul,li{
 }
 
 
-
+/*中间部分*/
 .container{
 	padding-top: 80px;
 	border: 2px solid lightpink;
 }
+/*banner*/
 #pic img{
 	margin: 0 auto;
 	display: block;
@@ -66,6 +68,7 @@ body,nav,ul,li{
 	width: 100%;
 	
 }
+/*三个pannel*/
 .container #panel_1 img{
 	width: 100%;
 }
@@ -79,10 +82,13 @@ body,nav,ul,li{
 	color: white;
 	font-size: 20px;
 }
-.container #panel_2 img,
-.container #panel_3 img{
+.container #panel_2 img{
 	width: 100%;
-	height: 150px;
+	height: 180px;
+}
+.container #panel_3 img{
+	width: 95%;
+	height: 100px;
 }
 .container #panel_3 img{
 	border-radius: 20px;
@@ -104,12 +110,42 @@ body,nav,ul,li{
 	text-align: center;
 	margin: 50px 0 30px 0;
 }
-
+/*movePic*/
+#movePic{
+	width: 700px;
+	margin: 0 auto;
+	height: 120px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid lightpink;
+}
+#movePic ul{
+	position:absolute; left:0; top:0;
+	margin-top: 5px;
+}
+#movePic ul li{
+	float:left; width:178px; height:108px; list-style:none;
+}
+#movePic img{
+	height: 110px;
+	width: 168px;
+	border-radius: 5px;
+}
+#movePic img:hover{
+	opacity: .8;
+	cursor: pointer;
+	transform: scale(2);
+	transform: rotate(5deg);
+	transition:all 1s;
+	
+}
+/*footer*/
 #footer{
 	height: 50px;
-	width: 87%;
+	margin-left: -1.5%;
+	width: 103%;
 	background: lightpink;
-	margin: 0 auto;
 }
 #footer p{
 	color: white;
@@ -118,3 +154,4 @@ body,nav,ul,li{
 	display: inline-block;
 	float: right;
 }
+

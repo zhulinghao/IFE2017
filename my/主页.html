@@ -8,6 +8,7 @@
 	<script src="../js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="js/movePic.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 		<nav class="navbar navbar-fixed-top" role="navagation" id="nav">
@@ -41,14 +42,12 @@
 			</div>
 			
 			<div class="panel panel-default"  style="border: 1px solid lightpink;margin-bottom: 40px;">
-			  <div class="panel-heading">advantages</div>
+			  <div class="panel-heading">advantages <span class="glyphicon glyphicon-minus pull-right" id="close"></span><span class="glyphicon glyphicon-plus pull-right" id="open" style="display: none;"></span></div>
 			  <div class="panel-body" id="panel_1">
 			    <div class="row">
 			    	<div class="col-md-8 col-sm-8">
 			    		<b>性格：</b>
-			    		<p>活泼、率直、可爱、天真、贤惠、多才、俊俏 
-							温柔、独立、温柔 善良 贤惠 
-							善良 纯洁 活泼、开朗、天真、率直 </p>
+			    		<p>活泼、率直、可爱、天真、贤惠、多才、俊俏 温柔、独立、温柔 善良 、贤惠 、善良、 纯洁、 活泼、开朗、天真、率直 </p>
 						<b>用我的话形容：</b>
 						<div id="txt_mark"> 性感  <br /> 魔鬼身材<br /> 口活不错
 						美丽 <br />叫声好听
@@ -157,14 +156,23 @@
 			   
 			  </div>
 			</div>
-			
+			<div id="movePic">
+			    <ul>
+			    	<li><img src="img/mv1.jpg" /></li>
+			    	<li><img src="img/mv2.jpg" /></li>
+			    	<li><img src="img/mv3.jpg" /></li>
+			    	<li><img src="img/mv4.jpg" /></li>
+			    </ul>
+			</div>
 			<div class="row cus-copy">
 				<p>Copyright © 2017-forever MR.HAO</p>
 				<p>爱悦悦的小昊昊 </p>
 			</div>
+			
+			<footer id="footer">
+				<p>- Grow old along with me,the best is yet to be. -</p>
+			</footer>
 		</div>
-		<footer id="footer">
-			<p>- Grow old along with me,the best is yet to be. -</p>
-		</footer>
+		
 </body>
 </html>
