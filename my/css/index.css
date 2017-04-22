@@ -33,7 +33,7 @@ body,nav,ul,li{
 
 
 /*中间部分*/
-.container{
+.container-fluid{
 	padding-top: 80px;
 	border: 2px solid lightpink;
 }
@@ -69,38 +69,38 @@ body,nav,ul,li{
 	
 }
 /*三个pannel*/
-.container #panel_1 img{
+.container-fluid #panel_1 img{
 	width: 100%;
 }
-.container #txt_mark{
+.container-fluid #txt_mark{
 	line-height: 50px;
 	font-size: 25px;
 	color: lightpink;
 }
-.container .panel-heading{
+.container-fluid .panel-heading{
 	background-color: lightpink;
 	color: white;
 	font-size: 20px;
 }
-.container #panel_2 img{
+.container-fluid #panel_2 img{
 	width: 100%;
 	height: 180px;
 }
-.container #panel_3 img{
+.container-fluid #panel_3 img{
 	width: 95%;
 	height: 100px;
 }
-.container #panel_3 img{
+.container-fluid #panel_3 img{
 	border-radius: 20px;
 }
-.container #panel_3 img:hover,
-.container #panel_2 img:hover{
+.container-fluid #panel_3 img:hover,
+.container-fluid #panel_2 img:hover{
 	opacity: .7;
 	transform: rotate(-4deg);
 	transition: all 0.5s;
 }
-.container #panel_2,
-.container #panel_3{
+.container-fluid #panel_2,
+.container-fluid #panel_3{
 	text-align: center;
 }
 #panel_1{
