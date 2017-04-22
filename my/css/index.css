@@ -19,8 +19,12 @@ body,nav,ul,li{
 #nav a{
 	color: black;
 }
-#nav a:hover{
+#nav li a:hover{
 	color: lightpink;
+}
+#nav li:hover{
+	transform: rotate(-4deg);
+	transition: all 0.5s; 
 }
 #tab{
 	margin-left: 40px;
@@ -48,12 +52,15 @@ body,nav,ul,li{
 	transform: translate(-50%,-50%);
 	z-index: 1; border-radius: 5px;
 	background: white; cursor: pointer;
+	opacity: 0.7;
 }
 #pic #txt i{
 	color: lightpink;
+	
 }
 #pic #txt:hover{
-	opacity: 0.9;
+	opacity: 1;
+	transition: 2s;
 }
 #carousel_pic img{
 	width: 100%;
@@ -72,9 +79,42 @@ body,nav,ul,li{
 	color: white;
 	font-size: 20px;
 }
-.container #panel_2 img{
+.container #panel_2 img,
+.container #panel_3 img{
 	width: 100%;
 	height: 150px;
 }
+.container #panel_3 img{
+	border-radius: 20px;
+}
+.container #panel_3 img:hover,
+.container #panel_2 img:hover{
+	opacity: .7;
+	transform: rotate(-4deg);
+	transition: all 0.5s;
+}
+.container #panel_2,
+.container #panel_3{
+	text-align: center;
+}
+#panel_1{
+	text-align: center;
+}
+.cus-copy{
+	text-align: center;
+	margin: 50px 0 30px 0;
+}
 
-
+#footer{
+	height: 50px;
+	width: 87%;
+	background: lightpink;
+	margin: 0 auto;
+}
+#footer p{
+	color: white;
+	font-size: 20px;
+	margin-top:17px;
+	display: inline-block;
+	float: right;
+}
