@@ -194,3 +194,44 @@ body,nav,ul,li{
             background: url(images/gray_btn.png) no-repeat right top;
             font-style: normal;
         }
+
+
+
+/*分享到*/
+#share{
+	height: 300px;
+	width: 150px;
+	position: fixed;
+	top: 50%;
+	transform: translate(0%,-50%);
+	background-color: white;
+	z-index: 100;
+	left: -150px;
+	border: 2px solid lightpink;
+	border-radius: 15px;
+}
+#share_span{
+	height: 80px;
+	width: 30px;
+	background: lightpink;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+	right: -30px;
+	font-size: 17px;
+	text-align: center;
+	border-radius: 5px;
+}
+#share_head{
+	text-align: center;
+	color: lightpink;
+	padding:10px 0px 10px 0px;
+	border-bottom: 3px solid lightpink;
+	font-weight: 500;
+	font-size: 20px;
+}
+#share_li{
+	
+}

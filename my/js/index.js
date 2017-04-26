@@ -87,4 +87,18 @@ window.onload=function ()
 		}
 		
 	});
+//share
+$('#share').hover(function(){
+	$('#share').stop().animate({left:'0px'});
+},function(){
+	$('#share').stop().animate({left:'-150px'});
+});
+var myUrl=location.href;
+console.log(myUrl);
+$('#share_li li a').eq(0).attr('href','http://service.weibo.com/share/share.php?url='+myUrl+'&language=zh_cn#_loginLayer_1492909233879'); 
+
+$('#share_head').html('SHARE');
 };
+
+
+
