@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>你昊哥哥给你的福利~</title>
+	</head>
+	<body>
+			输入优酷播放视频的网址：<input type="text" id="text" style="width: 500px;"/>
+			<input type="submit" id="first" value="进入观影界面" />
+		<script type="text/javascript">
+			window.onload=function () {
+				var firstBtn = document.getElementById('first');
+				firstBtn.onclick = function () {
+					var textd = document.getElementById('text');
+					window.location="https://vs.6no.cc/youku/index.php?id="+textd.value;
+				};
+				
+				var OriginTitle = document.title;
+				var st; 
+				function title(a,b) {
+					document.addEventListener('visibilitychange', function() { 
+					if (document.hidden) { 
+					        document.title = a; clearTimeout(st);
+					        alert('我是臭流氓，哈哈哈哈！');
+					        st2 = setTimeout(function() { document.title = OriginTitle; 
+					        }, 10000)
+					} else { 
+					        document.title = b + OriginTitle;clearTimeout(st2); 
+					        alert('不准你点出去');
+					         st = setTimeout(function() { document.title = OriginTitle; 
+					        }, 2000); 
+					} });
+				}
+				title('(●—●)不要看其他的骚东西！','(/≧▽≦/)你点回来啦！');
+			}
+		</script>
+	</body>
+</html>
