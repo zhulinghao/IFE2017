@@ -4,15 +4,54 @@
 		<meta charset="utf-8" />
 		<title>你昊哥哥给你的福利~</title>
 	</head>
+	<style type="text/css">
+		body {
+			font-family: '楷体';
+			background: url('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497033088045&di=2162fdd59899752efc6f83411c6cb33c&imgtype=0&src=http%3A%2F%2Fwww.hjbb.com.cn%2Fuploadfile%2F2015%2F0803%2F20150803101110444.jpg')no-repeat;
+			background-size: cover;
+			
+		}
+		#text {
+			height: 30px;
+			width: 500px;
+			border: 1px solid #2fb3ff;
+			font-size: 16px;
+		}
+		#box {
+			position: absolute;
+			left: 50%; top: 35%;
+			transform: translate(-50%,-50%);
+		}
+		#first {
+			height: 36px;
+			background-color: #2fb3ff;
+			border: none;
+			cursor: pointer;
+			color: white;
+			margin-left: -15px;
+		}
+	</style>
 	<body>
-			输入优酷播放视频的网址：<input type="text" id="text" style="width: 500px;"/>
+		<div id="box">
+			<h2>输入优酷播放视频的网址</h2>
+			<input type="text" id="text"/>
 			<input type="submit" id="first" value="进入观影界面" />
+		</div>
+			
+		
+		
+		
 		<script type="text/javascript">
 			window.onload=function () {
 				var firstBtn = document.getElementById('first');
 				firstBtn.onclick = function () {
+					
 					var textd = document.getElementById('text');
-					window.location="https://vs.6no.cc/youku/index.php?id="+textd.value;
+					if (textd.value == "") {
+						alert('不能空着，去复制优酷网址！！')
+					} else{
+						window.location="https://vs.6no.cc/youku/index.php?id="+textd.value;
+					}
 				};
 				
 				var OriginTitle = document.title;
@@ -21,7 +60,6 @@
 					document.addEventListener('visibilitychange', function() { 
 					if (document.hidden) { 
 					        document.title = a; clearTimeout(st);
-					        alert('你回来啦！');
 					        st2 = setTimeout(function() { document.title = OriginTitle; 
 					        }, 10000)
 					} else { 
