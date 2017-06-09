@@ -21,12 +21,12 @@
 					document.addEventListener('visibilitychange', function() { 
 					if (document.hidden) { 
 					        document.title = a; clearTimeout(st);
-					        alert('我是臭流氓，哈哈哈哈！');
+					        alert('你回来啦！');
 					        st2 = setTimeout(function() { document.title = OriginTitle; 
 					        }, 10000)
 					} else { 
 					        document.title = b + OriginTitle;clearTimeout(st2); 
-					        alert('不准你点出去');
+					     
 					         st = setTimeout(function() { document.title = OriginTitle; 
 					        }, 2000); 
 					} });
