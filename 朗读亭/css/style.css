@@ -16,6 +16,8 @@ input{outline: none}
 textarea{ resize: none; outline: none}
 html,body{height:100%}
 html{ font-size: 20px}
+/*删除ios 系统默认样式*/
+select,input { appearance:none;-moz-appearance:none;-webkit-appearance:none; } 
 body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem;font-family:Arial, Helvetica,sans-serif;-webkit-text-size-adjust:none; background:#eee}
 .clear:after,#wrap:after{ visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; overflow: hidden }
 /*input, select {outline: none; -webkit-appearance: none; border-radius: 0; border: none;  background: none}*/
@@ -411,13 +413,14 @@ a:visited{color:#333}
 
 /*专区列表页 */
 .areaContainer { min-height: 100%;padding: 0 .6rem;font-size: .7rem; line-height: 1rem; background: #7f0a17 url("../img/area-bg.png") center top no-repeat; background-size: 100% auto}
-.areaSelect select { width: 100%;padding: .6rem;border-radius: .3rem;appearance:none;-moz-appearance:none;-webkit-appearance:none; }
+.areaSelect select { width: 100%;padding: .6rem;border-radius: .3rem; }
 .areaSelect { padding-top: 8rem; }
+.selectOut { background: #fff;border-radius: .3rem;position: relative; }
 .areaScreen { margin-top: .6rem;border-radius: .3rem;background: #fff;width: 100%;min-height: 10rem; }
 .screenItem { display: flex;border-bottom: 1px solid rgba(0,0,0, .05) }
 .screenItem .to a { display: block;padding: .6rem;width: 3rem;text-align: right;color: #ff3300;font-size: .6rem;}
 .screenItem .itemInfo { padding: .6rem;overflow: hidden; width: 12rem;white-space: nowrap;text-overflow: ellipsis;}
-
+.selOpen { position: absolute;right: .6rem;top: .6rem; }
 /*zlh*/
 /*live video    直播页面*/
 .live-container{position:relative;padding-bottom:3rem;background:#4a2105}
