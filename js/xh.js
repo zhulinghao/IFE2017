@@ -1,7 +1,7 @@
-var newSnow = $('<div>❤</div>');
+var newSnow = $('<div>❉</div>');
 newSnow.css({'position':'absolute','color':'red'});
 $(function(){
-	var oKiss = $('<div>❤</div>');
+	var oKiss = $('<div>❉</div>');
 	oKiss.clone().appendTo($('body')).attr("id",'kiss');
 //	var oKiss = document.getElementById('kiss');
 	$('html').mouseover(function(){
