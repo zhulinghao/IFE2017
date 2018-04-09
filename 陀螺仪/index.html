@@ -103,10 +103,12 @@
 		    var alpha = event.alpha,
 		        beta = event.beta,
 		        gamma = event.gamma;
-		    left = left + beta * 100 + 'px'
+
+		    box.style.left = left + beta * 10 + 'px'
 		    // box[0].style.webkitTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		    // box[0].style.transform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		    // box[0].style.mozTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
+		    body.appendChild(beta)
 		}, false);
 	}
 </script>
