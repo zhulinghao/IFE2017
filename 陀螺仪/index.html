@@ -105,15 +105,16 @@
 		    var alpha = event.alpha,
 		        beta = event.beta,
 		        gamma = event.gamma;
-		    if (left > 0 || left < -300) {
+		    if (box.style.left.slice(0,-2) >= 0 || box.style.left.slice(0,-2) <= -300) {
 		    	console.log('超出')
 		    } else { 
 		    	box.style.left = left + gamma * 10 + 'px'
+		    	hehe.innerHTML = box.style.left.slice(0,-2)
 		    }
 		    // box[0].style.webkitTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		    // box[0].style.transform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		    // box[0].style.mozTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
-		   hehe.innerHTML = gamma
+		   
 		}, false);
 	}
 </script>
