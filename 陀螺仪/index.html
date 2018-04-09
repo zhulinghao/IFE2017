@@ -83,6 +83,7 @@
 	</style>
 </head>
 <body>
+	<div id="hehe"></div>
 	<div class='camera'>
 	    <div class='box'>
 	        <!-- <div class="face face1">1</div>
@@ -99,6 +100,7 @@
 		// var box = document.querySelectorAll('.box');
 		var box = document.getElementById('img');
 		var left = parseInt(box.style.left.slice(0,-2))
+		var hehe = document.getElementById('hehe');
 		window.addEventListener('deviceorientation', function(event) {
 		    var alpha = event.alpha,
 		        beta = event.beta,
@@ -108,7 +110,7 @@
 		    // box[0].style.webkitTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		    // box[0].style.transform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		    // box[0].style.mozTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
-		    body.appendChild(beta)
+		   hehe.innerHTML = beta
 		}, false);
 	}
 </script>
