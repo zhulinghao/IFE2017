@@ -5,10 +5,10 @@
 	<title>陀螺仪</title>
 	<style type="text/css">
 		.camera {
-		    width: 200px;
-		    height: 200px;
+		    width: 300px;
+		    height: 300px;
 		    perspective-origin: center;
-		    perspective: 200px;
+		    perspective: 300px;
 		}
 		.box {
 		    transform-style:preserve-3d;
@@ -58,9 +58,17 @@
     transform: translateX(50px) translateY(50px)  translateZ(-50px) rotateY(-180deg);
 }
 .box {
-    animation: rotate 4s linear infinite ;
+    animation: rotate 4s linear infinite;
 }
-
+.camera {
+    margin: 100px auto;
+    text-align: center;
+    overflow: hidden;
+}
+.img {
+	position: absolute;
+	top: 0;
+}
 /*@keyframes rotate{
      0%{
          -webkit-transform:rotateY(0) rotateX(0);
@@ -77,24 +85,29 @@
 <body>
 	<div class='camera'>
 	    <div class='box'>
-	        <div class="face face1">1</div>
+	        <!-- <div class="face face1">1</div>
 	        <div class="face face2">2</div>
 	        <div class="face face3">3</div>
 	        <div class="face face4">4</div>
 	        <div class="face face5">5</div>
-	        <div class="face face6">6</div>
+	        <div class="face face6">6</div> -->
+	        <img src="233.jpg" class="img" style="left: -150px;" id="img">
 	    </div>
 	</div>
 <script type="text/javascript">
 	window.onload = function() {
-		var box = document.querySelectorAll('.box');
+		// var box = document.querySelectorAll('.box');
+		var box = document.getElementById('img');
+		console.log(parseInt(,"aaa")
+		var left = box.style.left.slice(0,-2))
 		window.addEventListener('deviceorientation', function(event) {
 		    var alpha = event.alpha,
 		        beta = event.beta,
 		        gamma = event.gamma;
-		    box[0].style.webkitTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
-		    box[0].style.transform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
-		    box[0].style.mozTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
+		    left = left + beta + 'px'
+		    // box[0].style.webkitTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
+		    // box[0].style.transform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
+		    // box[0].style.mozTransform = 'rotateX(' + beta + 'deg) rotateY(' + gamma + 'deg) rotateZ(' + alpha + 'deg)';
 		}, false);
 	}
 </script>
