@@ -105,7 +105,7 @@
 		    var alpha = event.alpha,
 		        beta = event.beta,
 		        gamma = event.gamma;
-		    if (left > 0 && left < -300) {
+		    if (left > 0 || left < -300) {
 		    	console.log('超出')
 		    } else { 
 		    	box.style.left = left + gamma * 10 + 'px'
