@@ -22,8 +22,10 @@ input{outline: none}
 textarea{ resize: none; outline: none}
 html,body{height:100%}
 html{ font-size: 20px}
-body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem;font-family:Arial, Helvetica,sans-serif;-webkit-text-size-adjust:none; background:#eee}
+body{height: 100%;
+	width: 100%;position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem;font-family:Arial, Helvetica,sans-serif;-webkit-text-size-adjust:none; background:#fff}
 .clear:after,#wrap:after{ visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; overflow: hidden }
+* { padding: 0;margin: 0; }
 /*input, select {outline: none; -webkit-appearance: none; border-radius: 0; border: none;  background: none}*/
 a{color:#333; text-decoration:none; outline:0}
 a:visited{color:#333}
@@ -31,19 +33,31 @@ a:visited{color:#333}
 .bdb{ background: #000}
 
 @media screen and (min-width:750px){
-    html{ background:#eee}
+    html{ background:#fff}
     body{font-family:微软雅黑; width:750px; margin:0 auto}
 }
-.v {
-	position: absolute;
-	height: 500px;
-	left: -72px;
+.animatePic {
+	
 }
-.vContainer {
-	height: 500px;
-	width: 610px;
-	position: relative;
-	overflow: hidden;
+.bird {
+  background: url(./img111.jpg);
+  width: 200px;
+  height: 200px;
+  animation: bird 5s steps(15);
+  animation-fill-mode: forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+@keyframes bird {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -3000px 0px;
+  }
 }
 .loading-overlay {
   position: fixed;
@@ -69,8 +83,8 @@ a:visited{color:#333}
 	<div class="loading-overlay">
 	    <img src="loading.svg">
 	</div>
-	<div class="vContainer">
-		<video class="v" src="v1.mp4" autoplay></video>
+	<div class="bird">
+		
 	</div>
 	<script type="text/javascript">
 		window.onload  = function() {
