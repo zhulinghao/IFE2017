@@ -40,23 +40,25 @@ a:visited{color:#333}
 	
 }
 .bird {
-  background: url(./img111.jpg);
-  width: 200px;
-  height: 200px;
-  animation: bird 5s steps(15);
-  animation-fill-mode: forwards;
+  background: url(./ldt.jpg);
+  background-size: cover;
+  width: 320px;
+  height: 400px;
+  animation: bird 2s;
+  animation-fill-mode:forwards;
+  animation-timing-function: steps(11);
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -100px;
-  margin-left: -100px;
+  margin-top: -160px;
+  margin-left: -200px;
 }
 @keyframes bird {
   from {
     background-position: 0 0;
   }
   to {
-    background-position: -3000px 0px;
+    background-position: -3520px 0px;
   }
 }
 .loading-overlay {
@@ -84,7 +86,6 @@ a:visited{color:#333}
 	    <img src="loading.svg">
 	</div>
 	<div class="bird">
-		
 	</div>
 	<script type="text/javascript">
 		window.onload  = function() {
