@@ -1,0 +1,75 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*公共样式*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { margin:0; padding:0 }
+table { border-collapse:collapse; border-spacing:0}
+fieldset, img { border:0 }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal}
+ol, ul { list-style:none; display:block }
+ol, ul, li, dl, dd, dt{display:block}
+caption, th { text-align:left; }
+h1, h2, h3, h4, h5, h6 { font-size:100%; font-weight:normal}
+q:before, q:after { content:'' }
+abbr, acronym { border:0}
+input{outline: none}
+textarea{ resize: none; outline: none}
+html,body{height:100%}
+html{ font-size: 20px}
+/*删除ios 系统默认样式*/
+select,input { appearance:none;-moz-appearance:none;-webkit-appearance:none; } 
+body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem;font-family:Arial, Helvetica,sans-serif;-webkit-text-size-adjust:none; background:#eee}
+
+@media screen and (min-width:750px){
+    html{ background:#eee}
+    body{font-family:微软雅黑; width:750px; margin:0 auto !important;}
+}
+
+.banner {
+    height: 9rem;
+}
+.camera {
+    width: 9rem;
+    height: 15rem;
+    perspective-origin: center;
+    perspective: 30rem;
+    margin: 0 auto;
+}
+.box {
+    transform-style:preserve-3d;
+    position:relative;
+    width:9rem;
+    height:15rem;
+    border-radius: 5px;
+}
+.face {
+    width: 9rem;
+    height: 15rem;
+    position: absolute;
+}
+.face1 {
+    background: url('./img/ldt1.png') top center no-repeat;
+    background-size: 9rem 15rem;
+    transform:translateX(0rem) translateY(0rem) translateZ(0rem);
+}
+.face2 {
+    background: url('./img/ldt2.png');
+    background-size: 9rem 15rem;
+    transform-origin: 0 0;
+    transform:translateX(9rem) translateY(0rem) translateZ(0rem) rotateY(90deg);
+}
+.face5 {
+    background: url('./img/ldt5.png');
+    background-size: 9rem 15rem;
+    transform-origin: 100% 100%;
+    transform: translateX(-9rem) translateY(0rem) translateZ(0rem) rotateY(-90deg);
+}
+.face6 {
+    background: url('./img/ldt6.jpg');
+    background-size: 9rem 15rem;
+    transform: translateX(0rem) translateY(0rem)  translateZ(-9rem) rotateY(-180deg);
+}
+.box {
+    /*animation: rotate 100s linear infinite;*/
+    -webkit-transform:rotateY(10deg) rotateX(0);
+}

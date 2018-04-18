@@ -10,9 +10,6 @@
   background-size: cover;
   width: 320px;
   height: 400px;
-  animation: bird 2s;
-  animation-fill-mode:forwards;
-  animation-timing-function: steps(11);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -55,6 +52,11 @@
 	</div>
 	<script type="text/javascript">
 		window.onload  = function() {
+      var bird = document.querySelector('.bird')
+      setTimeout(function() {
+        bird.style.animation = 'bird 2s steps(11)';
+        bird.style.animationFillMode = 'forwards';
+      },1000)
 			var loadingBlock = document.querySelector('.loading-overlay')
 			loadingBlock.style.display = 'none'
 		}
