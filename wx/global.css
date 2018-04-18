@@ -75,3 +75,7 @@ body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem
     background-size: 10rem 18rem;
     transform: translateX(0rem) translateY(0rem)  translateZ(-10rem) rotateY(-180deg);
 }
+.box {
+    /*animation: rotate 100s linear infinite;*/
+    -webkit-transform:rotateY(-25deg);
+}
