@@ -18,18 +18,19 @@
 	        <div class="face face2"></div>
 	        <div class="face face5"></div>
             <div class="face face6"></div>
+            <div class="face face4"></div>
 	    </div>
 	</div>
 <script type="text/javascript">
 	window.onload = function() {
 		var box = document.querySelectorAll('.box');
 		window.addEventListener('deviceorientation', function(event) {
-		    var alpha = event.alpha,
-		        beta = event.beta,
-		        gamma = event.gamma;
-		    box[0].style.webkitTransform = 'rotateY(' + gamma + 'deg)';
-            box[0].style.transform = 'rotateY(' + gamma + 'deg)';
-            box[0].style.mozTransform = 'rotateY(' + gamma + 'deg)';
+		    var gamma = event.gamma;
+		    if (gamma < 30 && gamma > -30) {
+		    	box[0].style.webkitTransform = 'rotateY(' + gamma + 'deg)';
+	            box[0].style.transform = 'rotateY(' + gamma + 'deg)';
+	            box[0].style.mozTransform = 'rotateY(' + gamma + 'deg)';
+		    }
 		}, false);
 	}
 </script>
