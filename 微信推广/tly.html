@@ -32,21 +32,24 @@
             border-radius: 20px;
         }
         .face1 {
-            background: red;
+            background: url('face.png');
+            background-size: cover;
             transform:translateX(100px) translateY(100px) translateZ(100px);
         }
         .face2 {
-            background: blue;
+            background: url('right.png');
+            background-size: cover;
             transform-origin: 0 0;
             transform:translateX(300px) translateY(100px) translateZ(100px) rotateY(90deg);
         }
         .face5 {
-            background: #e5515f;
+            background: url('left.png');
+            background-size: cover;
             transform-origin: 100% 100%;
             transform: translateX(-50%) translateY(100px) translateZ(100px) rotateY(-90deg);
         }
         .box {
-            animation: rotate 10s linear infinite;
+            animation: rotate 100s linear infinite;
         }
         @keyframes rotate{
              0%{
@@ -67,9 +70,9 @@
     </div>
 	<div class='camera'>
 	    <div class='box'>
-	        <div class="face face1">1</div>
-	        <div class="face face2">2</div>
-	        <div class="face face5">5</div>
+	        <div class="face face1"></div>
+	        <div class="face face2"></div>
+	        <div class="face face5"></div>
 	    </div>
 	</div>
 <script type="text/javascript">
