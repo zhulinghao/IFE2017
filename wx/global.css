@@ -24,13 +24,9 @@ body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem
     html{ background:#eee}
     body{font-family:微软雅黑; width:750px; margin:0 auto !important;}
 }
-
-.banner {
-    height: 9rem;
-}
 .camera {
-    width: 10rem;
-    height: 18rem;
+    width: 8rem;
+    height: 14.4rem;
     perspective-origin: center;
     perspective: 30rem;
     margin: 0 auto;
@@ -43,35 +39,41 @@ body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem
     border-radius: 5px;
 }
 .face {
-    width: 10rem;
-    height: 18rem;
+    width: 8rem;
+    height: 14.4rem;
     position: absolute;
 }
 .face1 {
     background: url('./img/ldt1.png') top center no-repeat;
-    background-size: 10rem 18rem;
+    background-size: 8rem 14.4rem;
 }
 .face4 {
     background: #373737;
-    height: 10rem;
-    width: 10rem;
+    height: 8rem;
+    width: 8rem;
     transform-origin: 0 0;
-    transform: translateY(18rem) rotateX(-90deg);
+    transform: translateY(14.4rem) rotateX(-90deg);
 }
 .face2 {
     background: url('./img/ldt2.png');
-    background-size: 10rem 18rem;
+    background-size: 8rem 14.4rem;
     transform-origin: 0 0;
-    transform:translateX(10rem) translateY(0rem) translateZ(0rem) rotateY(90deg);
+    transform:translateX(8rem) translateY(0rem) translateZ(0rem) rotateY(90deg);
 }
 .face5 {
     background: url('./img/ldt5.png');
-    background-size: 10rem 18rem;
+    background-size: 8rem 14.4rem;
     transform-origin: 100% 100%;
-    transform: translateX(-10rem) translateY(0rem) translateZ(0rem) rotateY(-90deg);
+    transform: translateX(-8rem) translateY(0rem) translateZ(0rem) rotateY(-90deg);
 }
 .face6 {
     background: url('./img/ldt6.jpg');
-    background-size: 10rem 18rem;
-    transform: translateX(0rem) translateY(0rem)  translateZ(-10rem) rotateY(-180deg);
+    background-size: 8rem 14.4rem;
+    transform: translateX(0rem) translateY(0rem)  translateZ(-8rem) rotateY(-180deg);
+}
+.container {
+    padding-top: 13rem;
+    padding-bottom: 2rem;
+    background: url('img/bg.jpg');
+    background-size: 100%; 
 }
