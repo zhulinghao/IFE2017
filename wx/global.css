@@ -72,8 +72,8 @@ body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem
     transform: translateX(0rem) translateY(0rem)  translateZ(-8rem) rotateY(-180deg);
 }
 .container {
-    padding-top: 13rem;
-    padding-bottom: 2rem;
+    padding-top: 13.5rem;
+    padding-bottom: 11rem;
     background: url('img/bg.jpg');
     background-size: 100%; 
 }
