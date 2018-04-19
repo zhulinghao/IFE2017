@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head lang="en">
 	<meta charset="utf-8">
 	<title>陀螺仪</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" type="text/css" href="global.css">
+    <style type="text/css">
+    	@media screen and (min-width:750px){
+		    html{ background:#eee}
+		    body{font-family:微软雅黑; width:750px; margin:0 auto !important;}
+		}
+    </style>
 </head>
 <body>
 	<div class="container">
@@ -32,6 +38,20 @@
 	            box[0].style.mozTransform = 'rotateY(' + gamma + 'deg)';
 		    }
 		}, false);
+		//重置页面字体
+		function viewRest(){
+		    var oHTML = document.getElementsByTagName("html")[0];
+		    var docWidth = document.documentElement.clientWidth;
+		    if(docWidth<=750)
+		    {
+		        oHTML.style.fontSize = docWidth/18 + "px";
+		    }else if( docWidth >750)
+		    {
+		        //oHTML.style.fontSize = 750/18
+		        oHTML.style.fontSize = 250/6 + "px";
+		    }
+		}
+		viewRest()
 	}
 </script>
 </body>
