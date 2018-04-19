@@ -35,7 +35,7 @@
 			loadingBlock.style.display = 'none'
 			var box = document.querySelectorAll('.box');
 			window.addEventListener('deviceorientation', function(event) {
-			    var gamma = event.gamma;
+			    var gamma = event.gamma * 1.5;
 			    if (gamma < 30 && gamma > -30) {
 			    	box[0].style.webkitTransform = 'rotateY(' + gamma + 'deg)';
 		            box[0].style.transform = 'rotateY(' + gamma + 'deg)';
