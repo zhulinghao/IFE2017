@@ -73,7 +73,7 @@ a{color:#333; text-decoration:none; outline:0}
     transform: translateX(0rem) translateY(0rem)  translateZ(-4rem) rotateY(-180deg);
 }
 .container {
-    width: 17rem;
+    width: 18rem;
     padding-top: 12rem;
     padding-bottom: 10rem;
     background: url('img/bg.jpg');
