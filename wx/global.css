@@ -24,12 +24,10 @@ body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem
 a{color:#333; text-decoration:none; outline:0}
 .bdf{ background: #fff}
 .bdb{ background: #000}
-
-
 .camera {
     width: 8rem;
     height: 14.4rem;
-    perspective-origin: center;
+    /*perspective-origin: center;*/
     perspective: 30rem;
     margin: 0 auto;
 }
