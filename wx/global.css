@@ -22,6 +22,10 @@ body{position:relative;font-size:0.6rem!important; color:#333; line-height: 1rem
 .clear:after,#wrap:after{ visibility: hidden; display: block; font-size: 0; content: "."; clear: both; height: 0; overflow: hidden }
 /*input, select {outline: none; -webkit-appearance: none; border-radius: 0; border: none;  background: none}*/
 a{color:#333; text-decoration:none; outline:0}
+@media screen and (min-width:750px){
+        html{ background:#eee}
+        body{font-family:微软雅黑; width:750px; margin:0 auto !important;}
+    }
 .bdf{ background: #fff}
 .bdb{ background: #000}
 .camera {
