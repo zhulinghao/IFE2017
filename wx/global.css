@@ -70,11 +70,11 @@ a{color:#333; text-decoration:none; outline:0}
 .face6 {
     background: url('./img/ldt6.jpg');
     background-size: 7rem 12.6rem;
-    transform: translateX(0rem) translateY(0rem)  translateZ(-4rem) rotateY(-180deg);
+    transform: translateX(0rem) translateY(0rem)  translateZ(-3rem) rotateY(-180deg);
 }
 .container {
     width: 18rem;
-    padding-top: 12rem;
+    padding-top: 13rem;
     padding-bottom: 10rem;
     background: url('img/bg.jpg');
     background-size: 100%; 
