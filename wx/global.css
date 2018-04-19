@@ -25,9 +25,9 @@ a{color:#333; text-decoration:none; outline:0}
 .bdf{ background: #fff}
 .bdb{ background: #000}
 .camera {
-    width: 8rem;
-    height: 14.4rem;
-    /*perspective-origin: center;*/
+    width: 7rem;
+    height: 12.6rem;
+    perspective-origin: center;
     perspective: 30rem;
     margin: 0 auto;
 }
@@ -39,42 +39,46 @@ a{color:#333; text-decoration:none; outline:0}
     border-radius: 5px;
 }
 .face {
-    width: 8rem;
-    height: 14.4rem;
+    width: 7rem;
+    height: 12.6rem;
     position: absolute;
 }
 .face1 {
     background: url('./img/ldt1.png') top center no-repeat;
-    background-size: 8rem 14.4rem;
+    background-size: 7rem 12.6rem;
+    transform: translateZ(4rem);
 }
 .face4 {
     background: #373737;
-    height: 8rem;
-    width: 8rem;
+    height: 7rem;
+    width: 7rem;
     transform-origin: 0 0;
-    transform: translateY(14.4rem) rotateX(-90deg);
+    transform: translateY(12.6rem) translateZ(4rem) translateX(0rem) rotateX(-90deg);
 }
 .face2 {
     background: url('./img/ldt2.png');
-    background-size: 8rem 14.4rem;
+    background-size: 7rem 12.6rem;
     transform-origin: 0 0;
-    transform:translateX(8rem) translateY(0rem) translateZ(0rem) rotateY(90deg);
+    transform:translateX(7rem) translateY(0rem) translateZ(4rem) rotateY(90deg);
 }
 .face5 {
     background: url('./img/ldt5.png');
-    background-size: 8rem 14.4rem;
+    background-size: 7rem 12.6rem;
     transform-origin: 100% 100%;
-    transform: translateX(-8rem) translateY(0rem) translateZ(0rem) rotateY(-90deg);
+    transform: translateX(-7rem) translateY(0rem) translateZ(4rem) rotateY(-90deg);
 }
 .face6 {
     background: url('./img/ldt6.jpg');
-    background-size: 8rem 14.4rem;
-    transform: translateX(0rem) translateY(0rem)  translateZ(-8rem) rotateY(-180deg);
+    background-size: 7rem 12.6rem;
+    transform: translateX(0rem) translateY(0rem)  translateZ(-4rem) rotateY(-180deg);
 }
 .container {
-    width: 18rem;
-    padding-top: 12.5rem;
+    width: 17rem;
+    padding-top: 12rem;
     padding-bottom: 10rem;
     background: url('img/bg.jpg');
     background-size: 100%; 
+}
+.box {
+    transform: rotateY(0deg);
 }
