@@ -85,7 +85,7 @@ ol li { display: list-item !important;margin-left: .7rem; }
 .s3 { color: #fff; }
 .s3-nr { background: url('../img/cpnr.jpg');height: 3.2rem;width: 100%;background-size: 100% 3.2rem;margin: .7rem 0 1rem 0;font-size: .6rem; }
 /*s4*/
-.s4 .screen { height: 7.4rem;width: 13rem;border-radius: 10px;padding: .8rem;background-image: linear-gradient(-90deg, #272727, #151515); }
+.s4 .screen { height: 7.4rem;width: 13rem;border-radius: 10px;padding: .8rem;background-image: linear-gradient(-120deg, #272727, #151515); }
 .s4 .jlContent { padding: 0 .5rem; }
 .s4 .s4Lc { background: url('../img/s4-lc.jpg');background-size: cover;height: 6.1rem;width: 100%;margin: .7rem 0 .7rem 0; }
 /*s5*/
