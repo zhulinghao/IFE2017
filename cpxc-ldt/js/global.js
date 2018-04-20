@@ -12,6 +12,9 @@ function viewRest(){
     }
 }
 window.onload = function() {
+	// loading
+	var loadingBlock = document.querySelector('.loading-overlay')
+	loadingBlock.style.display = 'none'
 	// s8 陀螺仪
 	var imgPosition = {
         start: [4,8],
@@ -22,9 +25,6 @@ window.onload = function() {
         y: (imgPosition.end[1] - imgPosition.start[1]) / 2 + imgPosition.start[1]
     };
     var img = document.querySelector('#imgLdt');
-	// loading
-	var loadingBlock = document.querySelector('.loading-overlay')
-	loadingBlock.style.display = 'none'
 	// 陀螺仪
 	var box = document.querySelectorAll('.box');
 	if (window.DeviceOrientationEvent) {
