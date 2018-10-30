@@ -1,0 +1,80 @@
+@primaryColorl: #40a9ff;
+@picWidth: 50px;
+@imgWidth: 35px;
+@fontColor: #333;
+@boxShadow: 0 2px 12px 0 rgba(0,0,0,.1);
+
+@keyframes spring {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+body {
+  background: #36465d;
+}
+.websites_wrapper {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.home_section {
+  width: 1000px;
+  text-align: left;
+  margin: 0 auto;
+  .section_add {
+    color: @primaryColorl;
+    cursor: pointer;
+  }
+  .item {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    animation: spring 1s;
+    a {
+      color: @fontColor;
+      border-radius: 5px;
+      display: block;
+      padding: 5px 15px;
+      border: 1px solid #e8e8e8;
+      background: rgba(33, 32, 36, 0.03);
+    }
+    .delete {
+      visibility: hidden;
+      position: absolute;
+      padding: 5px;
+      right: 20px;
+      top: 0;
+      color: #999;
+    }
+    &:hover {
+      transition: .5s;
+      a {
+        background: rgba(33, 32, 36, 0.06);
+        box-shadow: @boxShadow;
+      }
+      transform: translateY(-5px);
+      .delete {
+        visibility: visible;
+      }
+    }
+    .pic {
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: rgba(33, 32, 36, 0.1);
+      height: @picWidth;
+      width: @picWidth;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        border-radius: 50%;
+        height: @imgWidth;
+        width: @imgWidth;
+      }
+    }
+  }
+}

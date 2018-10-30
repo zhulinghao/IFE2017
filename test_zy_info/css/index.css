@@ -1,0 +1,237 @@
+body,nav,ul,li{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+  	font-weight:400;
+}
+/*导航栏*/
+#nav_right img{
+	height: 20px;
+	width: 20px;
+	background-color: lightpink;
+	border-radius:8px ;
+}
+#nav_right{
+	margin-right:60px ;
+}
+#nav{
+	background-color: #f5f5f5;
+}
+#nav a{
+	color: black;
+}
+#nav li a:hover{
+	color: lightpink;
+}
+#nav li:hover{
+	transform: rotate(-4deg);
+	transition: all 0.5s; 
+}
+#tab{
+	margin-left: 40px;
+}
+
+
+/*中间部分*/
+.container-fluid{
+	padding-top: 80px;
+	border: 2px solid lightpink;
+}
+/*banner*/
+#pic img{
+	margin: 0 auto;
+	display: block;
+	margin-bottom: 50px;
+	width: 90%;
+	border-radius: 5px;
+	position: relative;
+}
+#pic #txt{
+	position: absolute;
+	text-align: center;
+	left: 50%;
+	top: 250px;
+	transform: translate(-50%,-50%);
+	z-index: 1; border-radius: 5px;
+	background: white; cursor: pointer;
+	opacity: 0.7;
+}
+#pic #txt i{
+	color: lightpink;
+	
+}
+#pic #txt:hover{
+	opacity: 1;
+	transition: 2s;
+}
+#carousel_pic img{
+	width: 100%;
+	
+}
+/*三个pannel*/
+.container-fluid #panel_1 img{
+	width: 100%;
+}
+.container-fluid #txt_mark{
+	line-height: 50px;
+	font-size: 25px;
+	color: lightpink;
+}
+.container-fluid .panel-heading{
+	background-color: lightpink;
+	color: white;
+	font-size: 20px;
+}
+.container-fluid #panel_2 img{
+	width: 100%;
+	height: 180px;
+}
+.container-fluid #panel_3 img{
+	width: 95%;
+	height: 100px;
+}
+.container-fluid #panel_3 img{
+	border-radius: 20px;
+}
+.container-fluid #panel_3 img:hover,
+.container-fluid #panel_2 img:hover{
+	opacity: .7;
+	transform: rotate(-4deg);
+	transition: all 0.5s;
+}
+.container-fluid #panel_2,
+.container-fluid #panel_3{
+	text-align: center;
+}
+#panel_1{
+	text-align: center;
+}
+.cus-copy{
+	text-align: center;
+	margin: 50px 0 30px 0;
+}
+/*movePic*/
+#movePic{
+	width: 700px;
+	margin: 0 auto;
+	height: 120px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid lightpink;
+}
+#movePic ul{
+	position:absolute; left:0; top:0;
+	margin-top: 5px;
+}
+#movePic ul li{
+	float:left; width:178px; height:108px; list-style:none;
+}
+#movePic img{
+	height: 110px;
+	width: 168px;
+	border-radius: 5px;
+}
+#movePic img:hover{
+	opacity: .8;
+	cursor: pointer;
+	transform: scale(2);
+	transform: rotate(5deg);
+	transition:all 1s;
+	
+}
+/*footer*/
+#footer{
+	height: 50px;
+	margin-left: -1.5%;
+	width: 103%;
+	background: lightpink;
+}
+#footer p{
+	color: white;
+	font-size: 20px;
+	margin-top:17px;
+	display: inline-block;
+	float: right;
+}
+
+/*alert样式*/
+#alertMsg {
+            display: none;
+            width: 300px;
+            height: 80px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px black;
+            padding: 10px;
+            font-size: 12px;
+            position: absolute;
+            text-align: center;
+            background: #fff;
+            z-index: 100000;
+        }
+
+#alertMsg_info {
+            padding: 2px 15px;
+            line-height: 1.6em;
+            text-align: left;
+        }
+#alertMsg_btn1, #alertMsg_btn2 {
+            display: inline-block;
+            background:lightpink;
+            padding-left: 3px;
+            color: white;
+            font-size: 12px;
+            text-decoration: none;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+#alertMsg_btn1 cite, #alertMsg_btn2 cite {
+            line-height: 24px;
+            display: inline-block;
+            padding: 0 13px 0 10px;
+            background: url(images/gray_btn.png) no-repeat right top;
+            font-style: normal;
+        }
+
+
+
+/*分享到*/
+#share{
+	height: 300px;
+	width: 150px;
+	position: fixed;
+	top: 50%;
+	transform: translate(0%,-50%);
+	background-color: white;
+	z-index: 100;
+	left: -150px;
+	border: 2px solid lightpink;
+	border-radius: 15px;
+}
+#share_span{
+	height: 80px;
+	width: 30px;
+	background: lightpink;
+	color: white;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+	right: -30px;
+	font-size: 17px;
+	text-align: center;
+	border-radius: 5px;
+}
+#share_head{
+	text-align: center;
+	color: lightpink;
+	padding:10px 0px 10px 0px;
+	border-bottom: 3px solid lightpink;
+	font-weight: 500;
+	font-size: 20px;
+}
+#share_li{
+	
+}

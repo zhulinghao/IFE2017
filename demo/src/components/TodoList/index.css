@@ -1,0 +1,16 @@
+.container {
+  background: #f7f7f7;
+  padding: 20px;
+}
+.content .item {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.content .item.done {
+  color: #999;
+  text-decoration: line-through;
+}
+.foot {
+  width: 300px;
+  margin: 20px auto;
+}

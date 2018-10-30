@@ -1,0 +1,37 @@
+// box shadow
+@boxShadow: 0 2px 12px 0 rgba(0,0,0,.1);
+
+.home_nav {
+  z-index: 1000;
+  position: fixed;
+  right: 2vw;
+  top: 50vh;
+  transform: translateY(-50%);
+  .item {
+    height: 60px;
+    width: 60px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .emoji {
+      height: 40px;
+      width: 40px;
+      text-align: center;
+      line-height: 40px;
+      background: #fff;
+      border-radius: 50%;
+      font-size: 25px;
+      animation: fadeIn .5s;
+      cursor: pointer;
+    }
+    .point {
+      box-shadow: @boxShadow;
+      height: 15px;
+      width: 15px;
+      background: #fff;
+      border: 3px solid #999;
+      border-radius: 50%;
+    }
+  }
+}

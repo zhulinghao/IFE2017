@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>文章DETAIL</title>
+		<style type="text/css">
+			#content {
+				width: 90%;
+				margin: 0 auto;
+			}
+			#content img {
+				width: 100%;
+			}
+			b {
+				color: blueviolet;
+				font-size: 40px;
+				cursor: pointer;
+			}
+			a {
+				color: blueviolet;
+				font-size: 40px;
+			}
+			.footer {
+				width: 90%;
+				margin: 0 auto;
+			}
+			#next {
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="content">
+			<b id="prev">上一章</b> <b id="next">下一章</b><br /><br />
+			<a href="index.html">回到主页</a>
+		</div>
+		<div class="footer">
+			<b id="prev">上一章</b>
+			<b id="next">下一章</b>
+		</div>
+		<script src="./jquery.min.js"></script>
+		<script type="text/javascript">
+			let allData = []
+			let img;
+			let search = window.location.search
+			let prev = document.getElementById('prev')
+			let next = document.getElementById('next')
+			let content = document.getElementById('content')
+			let id = search.substring(search.lastIndexOf('=')+1, search.length);
+			$.getJSON(`./doupo/data${id}.json`,function(data) {
+				allData = data
+				allData.forEach((item) => {
+					img = document.createElement('img')
+					img.src = item.url
+					content.appendChild(img)
+				})
+			})
+			next.addEventListener('click',function() {
+				if(id == '154') {
+					alert('是不是傻')
+					return
+				} else {
+					$(location).prop('href', `detail.html?id=${parseInt(id)+1}`)
+				}
+			})
+			prev.addEventListener('click',function() {
+				if(id == '1') {
+					alert('是不是傻')
+					return
+				} else {
+					$(location).prop('href', `detail.html?id=${parseInt(id)-1}`)
+				}
+			})
+
+		</script>
+	</body>
+</html>
