@@ -39,7 +39,7 @@ class Home extends React.Component {
   }
   // 鼠标滚动方法
   scrollFunc = (e) => {   // 需要做防抖处理
-    let timeout, wait = 300, { index } = this.state;
+    let timeout, timer = 400, { index } = this.state;
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(() => {
       if (e.wheelDelta > 0) {
@@ -47,7 +47,7 @@ class Home extends React.Component {
       } else {
         this.handleLink(index + 1)
       }
-    }, wait);
+    }, timer);
   }
   // index发生变化时调用切换
   handleLink = (next) => {
@@ -59,7 +59,7 @@ class Home extends React.Component {
   }
   itemAnimate(speed, next) {
     const items = this.refs.items;
-    items.style.transition = `1s ease-out`;
+    items.style.transition = `0.4s ease-out`;
     items.style.top = `${- next * 100}vh`;
   }
   render() {

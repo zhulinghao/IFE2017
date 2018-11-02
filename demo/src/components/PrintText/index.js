@@ -28,7 +28,7 @@ class PrintText extends React.Component {
   render() {
     const { text } = this.state;
     return (
-      <div style={{fontFamily: 'STZhongsong', fontSize: '16px',transition: '.1s'}}>
+      <div style={{fontFamily: 'STZhongsong', fontSize: '18px'}}>
         ·{text}
       </div>
     );
