@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import '@/assets/styles/App.less';
+import '@/util/config'
 import Websites from '@/containers/Websites/index';
 import TodoList from '@/components/TodoList/index';
 import TodoListRedux from '@/containers/TodoList/index';

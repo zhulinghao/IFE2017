@@ -4,7 +4,7 @@ import { Input, Row, Col, Button, message } from 'antd';
 import ChatList from './ChatList/index';
 import io from 'socket.io-client';
 let socket = null;
-
+console.log(global.webSocketUri)
 class Chat extends React.Component {
   constructor() {
     super();
@@ -18,7 +18,7 @@ class Chat extends React.Component {
     }
   }
   componentWillMount() {
-    socket = io.connect('localhost:3000');
+    socket = io.connect(global.webSocketUri);
   }
   componentDidMount() {
     // chat list

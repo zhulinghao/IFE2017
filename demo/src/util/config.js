@@ -1,0 +1,1 @@
+global.webSocketUri = process.env.WEBSOCKET_URI;
