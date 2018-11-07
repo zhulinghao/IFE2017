@@ -6,6 +6,12 @@ import Skill from './Skill/index';
 import Project from './Project/index';
 import Intro from './Intro/index';
 
+// 获取当前时间戳
+function _now() {
+  return +new Date()
+}
+let preScrollTime = null;
+
 class Home extends React.Component {
   state = {
     index: 0,
@@ -39,27 +45,25 @@ class Home extends React.Component {
   }
   // 鼠标滚动方法
   scrollFunc = (e) => {   // 需要做防抖处理
-    let timeout, timer = 400, { index } = this.state;
-    if (timeout) clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      if (e.wheelDelta > 0) {
-        this.handleLink(index - 1)
-      } else {
-        this.handleLink(index + 1)
-      }
-    }, timer);
+    let timer = 400, { index } = this.state;
+    let canDo = _now() - preScrollTime > timer;
+    if(!canDo) return;
+    let changePage = () => e.wheelDelta > 0 ? this.handleLink(index - 1) : this.handleLink(index + 1);
+    if(canDo) {
+      changePage();
+      preScrollTime = _now();
+    } 
   }
   // index发生变化时调用切换
   handleLink = (next) => {
     let pre = this.state.index;
     if ((pre > next && pre <= 0) || (pre < next && pre >= 3)) return;
-    let speed = Math.abs(next - pre);
     this.setState({ index: next });
-    this.itemAnimate(speed, next);
+    this.itemAnimate(next);
   }
-  itemAnimate(speed, next) {
+  itemAnimate(next) {
     const items = this.refs.items;
-    items.style.transition = `0.4s ease-out`;
+    items.style.transition = `0.6s ease-in`;
     items.style.top = `${- next * 100}vh`;
   }
   render() {

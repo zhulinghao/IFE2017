@@ -23,9 +23,9 @@ const Index = () => {
           { resumeIndex.github ? <a href={resumeIndex.github} target="_blank" rel="noopener noreferrer">github</a> : null }
         </div>
         <div className="index_description">
-          <PrintText text={"I will be better ~"} speed={100} delayTime={0}/>
-          <PrintText text={"~~~~~~~~~~~~~~~ ~"} speed={100} delayTime={1900}/>
-          <PrintText text={"~~~~~~~~~~~~~~~ ~"} speed={100} delayTime={4000}/>
+          <PrintText text={["I will be better ~", "~~~~~~~~~~~~~", "~~~~~~~~~~~~~"]} speed={100}/>
+          {/* <PrintText text={"~~~~~~~~~~~~~~~ ~"} speed={100} delayTime={1900}/>
+          <PrintText text={"~~~~~~~~~~~~~~~ ~"} speed={100} delayTime={4000}/> */}
         </div>
       </span>
     </section>

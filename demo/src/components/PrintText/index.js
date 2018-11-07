@@ -4,38 +4,54 @@ import PropTypes from 'prop-types';
 class PrintText extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { text: '' };
+    this.state = {
+      list: []
+    }
   }
-  componentDidMount() {
-    const delayTime = this.props.delayTime || 0;
-    setTimeout(() => {
-      this.print();
-    }, delayTime + 1000);
+  componentWillMount() {
+    const { speed, text } = this.props;
+    this.handleDo(speed, text)
   }
 
-  print() {
-    const { text, speed } = this.props;
+  handleDo(speed, text) {
+    let delayTime = 1000;
+    text.forEach((item, index) => {
+      setTimeout(() => {
+        this.print(item, index);
+      }, delayTime);
+      delayTime = delayTime + speed * item.length;
+    })
+  }
+
+  print(item, index) {
+    const { speed } = this.props;
+    let list = this.state.list;
     let n = 0;
     let clock = setInterval(() => {
-      n += 1
-      this.setState({ text: text.substring(0, n) })
-      if (n >= text.length) {
+      n += 1;
+      list[index] = item.substring(0, n);
+      this.setState({ list: list })
+      if (n >= item.length) {
         window.clearInterval(clock);
       }
     }, speed);
   }
  
   render() {
-    const { text } = this.state;
+    const { list } = this.state;
     return (
-      <div style={{fontFamily: 'STZhongsong', fontSize: '18px'}}>
-        ·{text}
+      <div>
+        {list.map((item, index) =>
+          <div style={{fontFamily: 'STZhongsong', fontSize: '18px'}} key={index}>
+            ·{item}
+          </div>
+        )}
       </div>
     );
   }
 }
 PrintText.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.array.isRequired,
   delayTime: PropTypes.number,
   speed: PropTypes.number
 }

@@ -4,7 +4,7 @@ import './index.less';
 const Skill = () => {
   return (
     <section className="skill">
-      <div className="tit">技能</div>
+      <div className="title">工作经历</div>
     </section>
   )
 }
