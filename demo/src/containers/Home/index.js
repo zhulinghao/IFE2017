@@ -5,6 +5,7 @@ import Index from './Index/index';
 import Skill from './Skill/index';
 import Project from './Project/index';
 import Intro from './Intro/index';
+import ls from '@/services/LocalStorage';
 
 // 获取当前时间戳
 function _now() {
@@ -14,7 +15,7 @@ let preScrollTime = null;
 
 class Home extends React.Component {
   state = {
-    index: 0,
+    index: Number(ls.Get('home_index')) || 0,
     startY: null
   }
   componentDidMount() {
@@ -45,12 +46,11 @@ class Home extends React.Component {
   }
   // 鼠标滚动方法
   scrollFunc = (e) => {   // 需要做防抖处理
-    let timer = 1000, { index } = this.state;
+    let timer = 800, { index } = this.state;
     let canDo = _now() - preScrollTime > timer;
     if(!canDo) return;
-    let changePage = () => e.wheelDelta > 0 ? this.handleLink(index - 1) : this.handleLink(index + 1);
     if(canDo) {
-      changePage();
+      e.wheelDelta > 0 ? this.handleLink(index - 1) : this.handleLink(index + 1);
       preScrollTime = _now();
     } 
   }
@@ -60,11 +60,16 @@ class Home extends React.Component {
     if ((pre > next && pre <= 0) || (pre < next && pre >= 3)) return;
     this.setState({ index: next });
     this.itemAnimate(next);
+    ls.Set('home_index', next.toString());
   }
   itemAnimate(next) {
     const items = this.refs.items;
     items.style.transition = `0.6s ease-in`;
     items.style.top = `${- next * 100}vh`;
+  }
+  // totop
+  toTop = () => {
+    this.handleLink(0)
   }
   render() {
     const { index } = this.state;
@@ -77,6 +82,7 @@ class Home extends React.Component {
           <Skill />
           <Project />
         </div>
+        { index === 3 ? <div className="home_to_top" onClick={this.toTop}><span className="text pink">TOP</span></div> : null }
       </div>
     )
   }

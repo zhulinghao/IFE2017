@@ -1,3 +1,13 @@
+.beautiful_text_shadow {
+  display: inline;
+  font-family: 'Lobster';
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+      color: #fff;
+  }
+}
 .page {
   height: 100vh;
   width: 100vw;
@@ -6,6 +16,7 @@
   align-items: center;
 }
 .home_container {
+  font-family: 'STZhongsong';
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -16,8 +27,8 @@
     color: #fff;
     .title {
       font-weight: bold;
-      font-size: 30px;
-      margin-bottom: 50px;
+      font-size: 5vh;
+      margin-bottom: 5vh;
     }
     .index {
       background-color: #36465d;
@@ -28,7 +39,7 @@
       .page;
       background-color: rgba(167,125,194, .5)
     }
-    .skill {
+    .work {
       .page;
       background: #56bc8a;
     }
@@ -36,6 +47,33 @@
       .page;
       background-color: #f2992e;
     }
+  }
+}
+
+@keyframes pink {
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #F56C6C, 0 0 36px #F56C6C, 0 0 30px #F56C6C, 0 0 40px #F56C6C, 0 0 50px #F56C6C;
+  }
+}
+
+
+.pink {
+  filter: brightness(110%);
+  text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #fff, 0 0 10px #F56C6C, 0 0 18px #F56C6C, 0 0 20px #F56C6C, 0 0 25px #F56C6C, 0 0 40px #F56C6C;
+  animation: pink 1.5s ease-in-out infinite alternate;
+}
+
+.home_to_top {
+  z-index: 1000;
+  position: fixed;
+  bottom: 10vh;
+  right: 10vw;
+  color: #fff;
+  cursor: pointer;
+  animation: fadeIn .5s;
+  .text {
+    .beautiful_text_shadow;
+    font-size: 5vh;
   }
 }
 

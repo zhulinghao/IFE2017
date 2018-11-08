@@ -10,7 +10,7 @@ const Project = () => {
     <div className="intro">
       <section>
         <div className="title">个人简介</div>
-        <div className="intro_description">前端开发，熟悉JavaScript~</div>
+        <div className="intro_description">前端开发，熟练掌握JavaScript~</div>
         <div className="intro_row">
           <div className="item">
             <img className="icon" alt="icon" src={school}></img>

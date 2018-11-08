@@ -42,7 +42,7 @@ class PrintText extends React.Component {
     return (
       <div>
         {list.map((item, index) =>
-          <div style={{fontFamily: 'STZhongsong', fontSize: '18px'}} key={index}>
+          <div style={{fontFamily: 'STZhongsong', fontSize: '3vh'}} key={index}>
             ·{item}
           </div>
         )}
