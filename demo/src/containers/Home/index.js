@@ -37,15 +37,15 @@ class Home extends React.Component {
   touchEnd = (e) => {
     let { index, startY } = this.state;
     let endY = e.changedTouches[0].pageY;
-    if (startY - endY > 100) {
+    if (startY - endY > 50) {
       this.handleLink(index + 1);
-    } else if (endY - startY > 100) {
+    } else if (endY - startY > 50) {
       this.handleLink(index - 1);
     }
   }
   // 鼠标滚动方法
   scrollFunc = (e) => {   // 需要做防抖处理
-    let timer = 400, { index } = this.state;
+    let timer = 1000, { index } = this.state;
     let canDo = _now() - preScrollTime > timer;
     if(!canDo) return;
     let changePage = () => e.wheelDelta > 0 ? this.handleLink(index - 1) : this.handleLink(index + 1);
