@@ -3,12 +3,28 @@ import { Link } from 'react-router-dom';
 import PrintText from '@/components/PrintText/index';
 import { resumeIndex } from '@/util/resume';
 import avatar from '@/assets/images/avatar.jpg';
-
+import bg1 from '@/assets/images/bg1.png';
+import bg2 from '@/assets/images/bg2.jpg';
+import bg3 from '@/assets/images/bg3.gif';
+import bg4 from '@/assets/images/bg4.png';
+import bg5 from '@/assets/images/bg5.jpg';
 import './index.less';
+
+function getBg() {
+  const random = Math.floor((Math.random() / 2) * 10) + 1;
+  const bgs = { bg1, bg2, bg3, bg4, bg5 };
+  return bgs[`bg${random}`]
+}
+
+const backGroundStyle = {
+  backgroundImage: `url(${getBg()})`,
+  backgroundPosition: '50% 50%',
+  backgroundSize: 'cover'
+}
 
 const Index = () => {
   return (
-    <section className="index">
+    <section className="index" style={backGroundStyle}>
       <span>
         <div className="index_avatar">
           <span>{resumeIndex.name}</span>
@@ -24,8 +40,6 @@ const Index = () => {
         </div>
         <div className="index_description">
           <PrintText text={["I will be better ~", "~~~~~~~~~~~~~", "~~~~~~~~~~~~~"]} speed={100}/>
-          {/* <PrintText text={"~~~~~~~~~~~~~~~ ~"} speed={100} delayTime={1900}/>
-          <PrintText text={"~~~~~~~~~~~~~~~ ~"} speed={100} delayTime={4000}/> */}
         </div>
       </span>
     </section>

@@ -1,5 +1,5 @@
 export const resumeIndex = {
-  name: 'zlh',
+  name: 'Vagabond',
   title: 'ZLH',
   blog: 'https://zhu8191553.github.io/',
   github: 'https://github.com/zhu8191553'

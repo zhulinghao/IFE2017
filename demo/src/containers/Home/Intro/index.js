@@ -6,11 +6,11 @@ import location from '@/assets/images/phone.svg'
 import phone from '@/assets/images/location.svg'
 import { resumeIntro } from '@/util/resume';
 
-const Project = () => {
+const Project = ({ doSomeThing }) => {
   return (
     <section className="intro">
       <span>
-        <div className="title">{resumeIntro.title}</div>
+        <div className="title" onClick={doSomeThing}>{resumeIntro.title}</div>
         <div className="intro_description">{resumeIntro.description}</div>
         <div className="intro_row">
           <div className="item">

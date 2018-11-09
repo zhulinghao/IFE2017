@@ -20,16 +20,18 @@ class Home extends React.Component {
   }
   componentDidMount() {
     this.handleLink(this.state.index);
+    const items = this.refs.items;
     //  注册事件
-    document.addEventListener('mousewheel', this.scrollFunc, false);
-    document.addEventListener("touchstart", this.touchStart, false);
-    document.addEventListener("touchend", this.touchEnd, false);
+    items.addEventListener('mousewheel', this.scrollFunc, false);
+    items.addEventListener("touchstart", this.touchStart, false);
+    items.addEventListener("touchend", this.touchEnd, false);
   }
   componentWillUnmount() {
+    const items = this.refs.items;
     // 当组件销毁的时候，移除注册的事件
-    document.removeEventListener('mousewheel', this.scrollFunc, false);
-    document.removeEventListener("touchstart", this.touchStart, false);
-    document.removeEventListener("touchend", this.touchEnd, false);
+    items.removeEventListener('mousewheel', this.scrollFunc, false);
+    items.removeEventListener("touchstart", this.touchStart, false);
+    items.removeEventListener("touchend", this.touchEnd, false);
   }
   // 移动端 touch 翻页
   touchStart = (e) => {
@@ -71,6 +73,10 @@ class Home extends React.Component {
   toTop = () => {
     this.handleLink(0)
   }
+
+  doThings() {
+    console.log(this.state.index)
+  }
   render() {
     const { index } = this.state;
     return (
@@ -78,7 +84,7 @@ class Home extends React.Component {
         <HomeNav handleLink={this.handleLink} index={index}/>
         <div className="items" ref="items">
           <Index />
-          <Intro />
+          <Intro doSomeThing={this.doThings.bind(this)}/>
           <Skill />
           <Project />
         </div>
