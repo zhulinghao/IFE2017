@@ -12,7 +12,9 @@ const Skill = () => {
         <div className="title">我的项目</div>
         {items.map(item =>
           <div className="project_item" key={item.name}>
-            <a href="https://console.mayibida.com" target="_blank" rel="noopener noreferrer" className="project_item_title"><Icon type="link" /> {item.name}</a>
+            {item.url ? 
+              <a href={item.url} target="_blank" rel="noopener noreferrer" className="project_item_title"><Icon type="link" /> {item.name}</a>
+              : <span className="project_item_title"><Icon type="minus" /> {item.name}</span>}
             <div className="project_item_skill">{item.skill}</div>
             <div className="project_item_description">{item.description}</div>
           </div>

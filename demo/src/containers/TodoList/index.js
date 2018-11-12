@@ -2,6 +2,7 @@ import React from 'react';
 import VisableTodoList from './VisableTodoList/index'
 import AddTodo from './AddTodo/index'
 import FilterTodo from './FilterTodo/index'
+import MyIcon from '@/components/MyIcon/index'
 import './index.less'
 
 const TodoListRedux = () => (
@@ -10,6 +11,8 @@ const TodoListRedux = () => (
     <AddTodo />
     <VisableTodoList />
     <FilterTodo />
+    <MyIcon/>
+    
   </div>
 )
 

@@ -39,7 +39,7 @@ const Index = () => {
           { resumeIndex.github ? <a href={resumeIndex.github} target="_blank" rel="noopener noreferrer">github</a> : null }
         </div>
         <div className="index_description">
-          <PrintText text={["I will be better ~", "~~~~~~~~~~~~~", "~~~~~~~~~~~~~"]} speed={100}/>
+          <PrintText text={["每当无知的人们又想劝着你放弃", "我就不自觉产生反击他的抵抗力", "—— cblock KunfuPen"]} speed={100}/>
         </div>
       </span>
     </section>

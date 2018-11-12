@@ -16,7 +16,7 @@ const HomeSectionList = ({ list, deleteItem, type }) => {
   return (
     <Row gutter={40}>
       {list.map(item =>
-        <Col span={4} key={item.id} className="item">
+        <Col xs={{ span: 12 }} lg={{ span: 4 }} key={item.id} className="item">
           <a href={item.url} target="_blank">
             <Popconfirm title="你确定要删除吗？" onConfirm={() => confirm(item.id, type) } onCancel={cancel} okText="Yes" cancelText="No">
               <Icon type="close" className="delete" theme="outlined" />

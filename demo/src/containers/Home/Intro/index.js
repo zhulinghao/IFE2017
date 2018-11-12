@@ -32,6 +32,9 @@ const Project = ({ doSomeThing }) => {
             <div>{resumeIntro.location}</div>
           </div>
         </div>
+        <div className="intro_skill">
+          <span className="intro_skill_label">Skill:</span> { resumeIntro.skills.map(item => <span className="intro_skill_item" key={item}>{item}</span>) }
+        </div>
       </span>
     </section>
   )

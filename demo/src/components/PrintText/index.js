@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {withRouter} from "react-router-dom";
 
 class PrintText extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class PrintText extends React.Component {
       list: []
     }
   }
+
   componentWillMount() {
     const { speed, text } = this.props;
     this.handleDo(speed, text)
@@ -36,13 +38,13 @@ class PrintText extends React.Component {
       }
     }, speed);
   }
- 
+
   render() {
     const { list } = this.state;
     return (
       <div>
         {list.map((item, index) =>
-          <div style={{fontFamily: 'STZhongsong', fontSize: '3vh'}} key={index}>
+          <div onClick={() => this.toSomeWhere()} style={{ fontFamily: 'STZhongsong', fontSize: '2.5vh' }} key={index}>
             ·{item}
           </div>
         )}
@@ -55,4 +57,4 @@ PrintText.propTypes = {
   delayTime: PropTypes.number,
   speed: PropTypes.number
 }
-export default PrintText;
+export default withRouter(PrintText);
