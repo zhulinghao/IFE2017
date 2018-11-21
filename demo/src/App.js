@@ -10,7 +10,6 @@ import Chat from '@/containers/Chat/index';
 
 class App extends Component {
   render() {
-    one();
     return (
       <div className="App">
         <Router >
