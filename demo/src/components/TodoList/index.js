@@ -22,6 +22,7 @@ class TodoList extends Component {
     const { list } = this.state;
     ls.Set('todos', list);
   }
+  
   handleEnter = () => {
     const ramdomId = uuidv1();    //根据时间戳生成唯一字符串
     this.setState({

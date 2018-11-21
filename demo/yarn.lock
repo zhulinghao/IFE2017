@@ -7666,6 +7666,10 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-circle@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-circle/-/react-circle-1.1.1.tgz#f97ccf3e2a37a91ea50280ea8262420e0d1de60c"
+
 react-dev-utils@^5.0.2:
   version "5.0.2"
   resolved "http://registry.npm.taobao.org/react-dev-utils/download/react-dev-utils-5.0.2.tgz#7bb68d2c4f6ffe7ed1184c5b0124fcad692774d2"
@@ -9798,3 +9802,7 @@ yauzl@^2.2.1, yauzl@^2.4.2:
 yeast@0.1.2:
   version "0.1.2"
   resolved "http://registry.npm.taobao.org/yeast/download/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
+
+zlh-nb-helloworld@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/zlh-nb-helloworld/-/zlh-nb-helloworld-1.0.0.tgz#3c48b48b85edc84fc112bc83d7ea34647b14eaa2"

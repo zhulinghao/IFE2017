@@ -5,6 +5,7 @@ import Index from './Index/index';
 import Skill from './Skill/index';
 import Project from './Project/index';
 import Intro from './Intro/index';
+import Experience from './Experience/index';
 import ls from '@/services/LocalStorage';
 
 // 获取当前时间戳
@@ -12,6 +13,7 @@ function _now() {
   return +new Date()
 }
 let preScrollTime = null;
+const pageCount = 4;
 
 class Home extends React.Component {
   state = {
@@ -22,16 +24,16 @@ class Home extends React.Component {
     this.handleLink(this.state.index);
     const items = this.refs.items;
     //  注册事件
-    items.addEventListener('mousewheel', this.scrollFunc, false);
-    items.addEventListener("touchstart", this.touchStart, false);
-    items.addEventListener("touchend", this.touchEnd, false);
+    items.addEventListener('mousewheel', this.scrollFunc);
+    items.addEventListener("touchstart", this.touchStart);
+    items.addEventListener("touchend", this.touchEnd);
   }
   componentWillUnmount() {
     const items = this.refs.items;
     // 当组件销毁的时候，移除注册的事件
-    items.removeEventListener('mousewheel', this.scrollFunc, false);
-    items.removeEventListener("touchstart", this.touchStart, false);
-    items.removeEventListener("touchend", this.touchEnd, false);
+    items.removeEventListener('mousewheel', this.scrollFunc);
+    items.removeEventListener("touchstart", this.touchStart);
+    items.removeEventListener("touchend", this.touchEnd);
   }
   // 移动端 touch 翻页
   touchStart = (e) => {
@@ -59,14 +61,14 @@ class Home extends React.Component {
   // index发生变化时调用切换
   handleLink = (next) => {
     let pre = this.state.index;
-    if ((pre > next && pre <= 0) || (pre < next && pre >= 3)) return;
+    if ((pre > next && pre <= 0) || (pre < next && pre >= pageCount)) return;
     this.setState({ index: next });
     this.itemAnimate(next);
     ls.Set('home_index', next.toString());
   }
   itemAnimate(next) {
     const items = this.refs.items;
-    items.style.transition = `0.6s ease-in`;
+    items.style.transition = `0.4s ease-in`;
     items.style.top = `${- next * 100}vh`;
   }
   // totop
@@ -85,10 +87,11 @@ class Home extends React.Component {
         <div className="items" ref="items">
           <Index />
           <Intro doSomeThing={this.doThings.bind(this)}/>
-          <Skill />
+          <Experience />
           <Project />
+          <Skill />
         </div>
-        { index === 3 ? <div className="home_to_top" onClick={this.toTop}><span className="text pink">TOP</span></div> : null }
+        { index === pageCount ? <div className="home_to_top" onClick={this.toTop}><span className="text pink">TOP</span></div> : null }
       </div>
     )
   }

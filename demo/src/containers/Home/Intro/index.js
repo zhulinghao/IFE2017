@@ -33,7 +33,7 @@ const Project = ({ doSomeThing }) => {
           </div>
         </div>
         <div className="intro_skill">
-          <span className="intro_skill_label">Skill:</span> { resumeIntro.skills.map(item => <span className="intro_skill_item" key={item}>{item}</span>) }
+          <span className="intro_skill_label">技能:</span> { resumeIntro.skills.map(item => <span className="intro_skill_item" key={item}>{item}</span>) }
         </div>
       </span>
     </section>

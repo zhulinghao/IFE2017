@@ -1,22 +1,23 @@
 import React from 'react';
 import './index.less';
-import { resumeSkill } from '@/util/resume';
-
-const items = resumeSkill.items;
+import Circle from 'react-circle';
+import { resumeSkill } from '@/util/resume'
 
 const Skill = () => {
   return (
-    <section className="work">
-      <span>
-        <div className="title">{resumeSkill.title}</div>
-        {items.map(item => 
-          <div className="skill_item" key={item.name}>
-            <div className="head"><span className="name">{item.name}</span><span className="time">{item.time}</span></div>
-            <div className="position">{item.position}</div>
-            <div className="description">{item.description}</div>
-          </div>
-        )}
-      </span>
+    <section className="skill">
+      <div className="wrapper_skill">
+      {resumeSkill.map(item => 
+        <div className="skill_item" key={item.name}>
+          <div className="name">{item.name}</div>
+          <Circle
+            progress={item.sorce}
+            progressColor="#666"
+          />
+        </div>
+      )}
+        
+      </div>
     </section>
   )
 }
