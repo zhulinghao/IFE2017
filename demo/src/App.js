@@ -7,7 +7,6 @@ import TodoList from '@/components/TodoList/index';
 import TodoListRedux from '@/containers/TodoList/index';
 import Home from '@/containers/Home/index';
 import Chat from '@/containers/Chat/index';
-import { one } from 'zlh-nb-helloworld';
 
 class App extends Component {
   render() {
