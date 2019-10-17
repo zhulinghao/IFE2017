@@ -13,8 +13,8 @@ function viewRest(){
 }
 window.onload = function() {
 	// loading
-	var loadingBlock = document.querySelector('.loading-overlay')
-	loadingBlock.style.display = 'none'
+	// var loadingBlock = document.querySelector('.loading-overlay')
+	// loadingBlock.style.display = 'none'
 	// s8 陀螺仪
 	var imgPosition = {
         start: [4,8],
@@ -25,18 +25,21 @@ window.onload = function() {
         y: (imgPosition.end[1] - imgPosition.start[1]) / 2 + imgPosition.start[1]
     };
     var img = document.querySelector('#imgLdt');
-	// 陀螺仪
+    // 陀螺仪
 	var box = document.querySelectorAll('.box');
 	if (window.DeviceOrientationEvent) {
 		window.addEventListener('deviceorientation', function(event) {
+            alert(JSON.stringify(event))
 		    let {alpha, beta, gamma} = event;
 		    if (gamma*1.5 < 30 && gamma*1.5 > -30) {
 		    	box[0].style.webkitTransform = 'rotateY(' + gamma*1.5 + 'deg)';
 	            box[0].style.transform = 'rotateY(' + gamma*1.5 + '*1.5deg)';
 	            box[0].style.mozTransform = 'rotateY(' + gamma*1.5 + 'deg)';
-		    }
+            }
+            alert(gamma)
 	        //左右旋转
 	        if(Math.abs(gamma)< 15){
+                alert('左右选装')
 	            img.style.left = imgCenterPosition.x + gamma / 90 * 40 + 'rem';
 	            img.style.transform = 'perspective(200px)' + 'rotateY(' + Math.abs(gamma)/2 +'deg)';
 	        } else{
@@ -51,26 +54,9 @@ window.onload = function() {
             }
         }, false);
 	} else {
-		console.log('浏览器不支持DeviceOrientationEvent')
+		alert('浏览器不支持DeviceOrientationEvent')
 	}
 	//重置页面字体
 	viewRest()
-	// 初始化swiper
-	var sw2 = new Swiper ('.sw2', {
-		speed: 500,
-		autoplay:true,
-		// 如果需要分页器
-		pagination: {
-		  el: '.sw2-pagination',
-		}
-	})
-	var mySwiper = new Swiper ('.swiper-container', {
-		speed: 500,
-		autoplay:true,
-		// 如果需要分页器
-		pagination: {
-		  el: '.swiper-pagination',
-		},
-	})
 	
 }
