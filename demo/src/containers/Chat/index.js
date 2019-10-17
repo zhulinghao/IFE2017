@@ -4,7 +4,6 @@ import { Input, Row, Col, Button, message } from 'antd';
 import ChatList from './ChatList/index';
 import io from 'socket.io-client';
 let socket = null;
-console.log(global.webSocketUri)
 class Chat extends React.Component {
   constructor() {
     super();

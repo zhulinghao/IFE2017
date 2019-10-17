@@ -2,6 +2,7 @@ import React from 'react';
 import './index.less';
 import Circle from 'react-circle';
 import { resumeSkill } from '@/util/resume'
+import { Button } from 'antd';
 
 const Skill = () => {
   return (
@@ -18,6 +19,7 @@ const Skill = () => {
       )}
         
       </div>
+      <Button style={ {marginTop: '20px'} } type="primary">23333333333333</Button>
     </section>
   )
 }
