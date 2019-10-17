@@ -36,10 +36,8 @@ window.onload = function() {
 	            box[0].style.transform = 'rotateY(' + gamma*1.5 + '*1.5deg)';
 	            box[0].style.mozTransform = 'rotateY(' + gamma*1.5 + 'deg)';
             }
-            alert(gamma)
 	        //左右旋转
 	        if(Math.abs(gamma)< 15){
-                alert('左右选装')
 	            img.style.left = imgCenterPosition.x + gamma / 90 * 40 + 'rem';
 	            img.style.transform = 'perspective(200px)' + 'rotateY(' + Math.abs(gamma)/2 +'deg)';
 	        } else{
